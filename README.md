@@ -1,2 +1,3 @@
-# DATA534-project
-API wrapper in R
+# christmaswrap - group project for DATA534
+
+API wrapper R library for the Christmas Countdown API

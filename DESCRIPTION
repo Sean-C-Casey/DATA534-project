@@ -1,0 +1,19 @@
+Package: christmaswrap
+Title: A wrapper for the Christmas Countdown API
+Version: 0.1.0.9000
+Authors@R: 
+    c(
+        person("Sean", "Casey", , "sccasey04@mail.ubc.ca", role = c("aut", "cre")),
+        person("Kevin", "Radford", , "radford7@mail.ubc.ca", role = c("aut", "cre")),
+        person("Gavin", "Grochowski", , "gavingro@mail.ubc.ca", role = c("aut", "cre"))
+    )
+Description: Simple wrapper library for the Christmas Countdown API 
+    (api.christmascountdown.live).
+License: MIT + file LICENSE
+Depends:
+    R (>= 4.0)
+Imports:
+    httr (>= 1.4.2)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
