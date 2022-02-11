@@ -1,4 +1,3 @@
-context("Our example test file to replicate.")
 library(christmaswrap)
 
 # Tests
