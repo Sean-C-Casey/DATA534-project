@@ -14,14 +14,14 @@ time_left <- function(timezone = NULL) {
 		stop("TypeError: 'timezone' must be a string")
 	
 	# Execute GET request
-	URL <- sprintf("https://api.christmascountdown.live/pine/timeleft")
-	response <- httr:GET(url = URL, query = list(timezone = timezone))
+	URL <- "https://api.christmascountdown.live/pine/timeleft"
+	response <- httr::GET(url = URL, query = list(timezone = timezone))
 	
 	# Check if request executed successfully
 	if (response$status_code != 200)
 		stop(sprintf("HTTP Error: error code - %d", response$status_code))
 	
 	# Process response and return
-	result <- rjson::fromJSON(rawToChar(r$content))
+	result <- rjson::fromJSON(rawToChar(response$content))
 	return(result)
 }
