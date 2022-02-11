@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  R-CMD-check:
     runs-on: macos-latest
 
     steps:
@@ -16,7 +16,6 @@ jobs:
         with:
           r-version: 'release'
 
-      - name: Install dependencies
       - uses: r-lib/actions/setup-r-dependencies@v1
         with:
           extra-packages: rcmdcheck
