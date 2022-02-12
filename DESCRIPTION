@@ -13,6 +13,7 @@ License: MIT + file LICENSE
 Depends:
     R (>= 4.0)
 Imports:
+    rjson,
     httr (>= 1.4.2),
     stringr (>= 1.4.0)
 Encoding: UTF-8

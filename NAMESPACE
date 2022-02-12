@@ -2,4 +2,6 @@
 
 export(all_jokes)
 export(time_left)
+export(total_time_left)
+export(weekday)
 export(period_left)
