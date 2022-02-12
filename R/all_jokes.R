@@ -3,7 +3,7 @@
 #' This function requests all of the jokes from the Christmas Countdown API,
 #' then returns the setups and punchlines in a long list.
 #' 
-#' @return A list containing both the setups (\code{$question}) and punchlines (\code{$answer}).
+#' @return A long list of 2-item-lists containing both the setups (\code{$question}) and punchlines (\code{$answer}).
 #' @examples 
 #' all_jokes()
 #' @export
