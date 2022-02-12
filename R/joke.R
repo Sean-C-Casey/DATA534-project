@@ -1,6 +1,6 @@
 #' Get a Christmas joke 
 #' 
-#' This function request a random joke from the Christmas Countdown API,
+#' This function requests a random joke from the Christmas Countdown API,
 #' then returns the setup and punchline in a list.
 #' 
 #' @return A list containing both the setup (\code{$question}) and punchline (\code{$answer}).
