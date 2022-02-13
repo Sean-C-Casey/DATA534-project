@@ -1,0 +1,78 @@
+---
+title: "Introduction to christmaswrap"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to christmaswrap}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(christmaswrap)
+```
+
+The christmaswrap package wraps the [christmascountdown API](https://christmascountdown.live/api) and provides access to each of the endpoints.
+
+## Get your kids excited about data science early with Christmas-themed plots!
+The `period_left()` function can be used to get the time left until Christmas in a variety of different time units. For this plot, we'll use the time unit "sleeps".  
+```{r}
+# Use period_left to get sleeps left until Christmas
+sleeps_left <- period_left("sleeps", timezone = "PST")
+
+# Calculate sleeps completed so far
+sleeps_done <- 365 - sleeps_left
+```
+
+To make the plot a bit more fun, we can add a joke to the plot. The `joke()` function can be used to get a random Christmas-themed joke.
+```{r}
+# Get fun joke to spice up the plot
+joke <- joke()
+
+# Plot time until Christmas
+pie(
+  c(sleeps_done, sleeps_left),
+  labels = c("", "Sleeps Left"),
+  col = c("darkgreen", "red3"),
+  main = joke$question,
+  sub = joke$answer
+)
+```
+
+If we aren't happy with a random joke, we can use the `all_jokes()` function to get all possible jokes and choose a specific one.  
+```{r}
+jokes <- all_jokes()
+jokes[[90]]
+```
+
+Maybe we want to plot each time unit. The `time_left()` function allows us to get all time units with one request. For this example we're going to use a log scale to allow us to see all the units better.  
+```{r}
+# Get time left in each time unit
+all_times_left <- time_left()
+
+# Plot each time unit
+barplot(
+  unname(unlist(all_times_left)),
+  names.arg = names(all_times_left),
+  log = 'y',
+  col = c("darkgreen", "red3")
+)
+```
+
+We can also use a similar plot to show the exact time left until Christmas. The previous time left functions allowed us to get the time until Christmas in a single time unit. The `total_time_left()` function allows us to get the time left until Christmas using multiple time units.  
+```{r}
+time_til_christmas <- total_time_left()
+
+barplot(
+  unname(unlist(time_til_christmas)),
+  names.arg = names(time_til_christmas),
+  col = c("darkgreen", "red3")
+)
+```
+
