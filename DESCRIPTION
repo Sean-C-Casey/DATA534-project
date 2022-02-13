@@ -4,8 +4,8 @@ Version: 0.1.0.9000
 Authors@R: 
     c(
         person("Sean", "Casey", , "sccasey04@mail.ubc.ca", role = c("aut", "cre")),
-        person("Kevin", "Radford", , "radford7@mail.ubc.ca", role = c("aut", "cre")),
-        person("Gavin", "Grochowski", , "gavingro@mail.ubc.ca", role = c("aut", "cre"))
+        person("Kevin", "Radford", , "radford7@mail.ubc.ca", role = c("aut", "ctb")),
+        person("Gavin", "Grochowski", , "gavingro@mail.ubc.ca", role = c("aut", "ctb"))
     )
 Description: Simple wrapper library for the Christmas Countdown API 
     (api.christmascountdown.live).
@@ -13,12 +13,15 @@ License: MIT + file LICENSE
 Depends:
     R (>= 4.0)
 Imports:
-    rjson,
     httr (>= 1.4.2),
+    rjson (>= 0.2.20),
     stringr (>= 1.4.0)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Suggests: 
+    rmarkdown,
+    knitr,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+VignetteBuilder: knitr
