@@ -4,8 +4,8 @@ Version: 0.1.0.9000
 Authors@R: 
     c(
         person("Sean", "Casey", , "sccasey04@mail.ubc.ca", role = c("aut", "cre")),
-        person("Kevin", "Radford", , "radford7@mail.ubc.ca", role = c("aut", "cre")),
-        person("Gavin", "Grochowski", , "gavingro@mail.ubc.ca", role = c("aut", "cre"))
+        person("Kevin", "Radford", , "radford7@mail.ubc.ca", role = c("aut", "ctb")),
+        person("Gavin", "Grochowski", , "gavingro@mail.ubc.ca", role = c("aut", "ctb"))
     )
 Description: Simple wrapper library for the Christmas Countdown API 
     (api.christmascountdown.live).
