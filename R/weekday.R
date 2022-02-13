@@ -34,6 +34,6 @@ weekday <- function(return_index = FALSE) {
     # API returns zero-based index, so convert to R's 1-based system
     index <- index + 1
     if (return_index)
-        return(index)
+        return(as.integer(index))
     return(weekdays[index])
 }
