@@ -28,18 +28,21 @@ period_left <- function(period, timezone = NULL) {
 
     # Build URL and perform HTTP GET request and process results
     url <- sprintf("https://api.christmascountdown.live/pine/timeleft/%s", period)
+    ua <- httr::user_agent("https://github.com/Sean-C-Casey/christmaswrap")
+    
     if (is.null(timezone))
-        response <- httr::GET(url, httr::add_headers(accept = "application/json"))
+        response <- httr::GET(url, httr::add_headers(accept = "application/json"), ua)
     else
         response <- httr::GET(
             url,
             httr::add_headers(accept = "application/json"),
-            query = list(timezone = timezone)
+            query = list(timezone = timezone),
+            ua
         )
 
     # Extract result and return
     if (response$status_code != 200)
-        return(sprintf("HTTP Error: %d", response$status_code))
+        stop(sprintf("HTTP Error: %d", response$status_code))
     result <- rawToChar(response$content)
     return(as.integer(result))
 }

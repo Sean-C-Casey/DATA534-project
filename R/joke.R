@@ -8,11 +8,13 @@
 #' joke()
 #' @export
 joke <- function() {
+    # Make API request
     url <- "https://api.christmascountdown.live/pine/joke"
+    ua <- httr::user_agent("https://github.com/Sean-C-Casey/christmaswrap")
     response <-
-        httr::GET(url)
+        httr::GET(url, ua)
     
-    # Catch Connection Errors
+    # Catch API/Connection Errors
     if (response$status_code != 200) {
         stop(paste("HTTP Error: ", response$status_code))
     }
