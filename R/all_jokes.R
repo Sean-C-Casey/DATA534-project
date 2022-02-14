@@ -23,5 +23,3 @@ all_jokes <- function() {
         return(text)
     }
 }
-
-all_jokes()
