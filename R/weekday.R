@@ -26,7 +26,7 @@ weekday <- function(return_index = FALSE) {
 
     # Extract result and return
     if (response$status_code != 200)
-        return(sprintf("HTTP Error: %d", response$status_code))
+        stop(sprintf("HTTP Error: %d", response$status_code))
     weekdays <- c(
         "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
     )

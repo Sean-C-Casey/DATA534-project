@@ -15,7 +15,8 @@ time_left <- function(timezone = NULL) {
 	
 	# Execute GET request
 	URL <- "https://api.christmascountdown.live/pine/timeleft"
-	response <- httr::GET(url = URL, query = list(timezone = timezone))
+	ua <- httr::user_agent("https://github.com/Sean-C-Casey/christmaswrap")
+	response <- httr::GET(url = URL, query = list(timezone = timezone), ua)
 	
 	# Check if request executed successfully
 	if (response$status_code != 200)
