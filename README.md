@@ -9,11 +9,10 @@ christmaswrap is an API wrapper written in R for the [Christmas Countdown API](h
 ## Installation 
 
 ```{r}
-install.packages("christmaswrap")
-
-# alternatively
-
-devtools::install_github("") # not sure how this works...
+if (!require("remotes")) {
+  install.packages("remotes")
+}
+remotes::install_github("Sean-C-Casey/christmaswrap")
 ```
 
 ## Usage
