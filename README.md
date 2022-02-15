@@ -1,12 +1,12 @@
 # christmaswrap
 
-*place badges here? CI, C-RAN status...*
+![Christmaswrap Build + Test CI Badge](https://github.com/Sean-C-Casey/christmaswrap/actions/workflows/check-standard.yaml/badge.svg)
 
 ## Overview
 
 christmaswrap is an API wrapper written in R for the [Christmas Countdown API](https://christmascountdown.live/api).  
 
-## Installation - *remove this section if we don't publish*
+## Installation 
 
 ```{r}
 install.packages("christmaswrap")
